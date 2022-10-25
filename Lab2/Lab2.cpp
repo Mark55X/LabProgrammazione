@@ -11,7 +11,7 @@ private:
 
 	static constexpr int kDefaultDenominator = 1;
 
-	int GetCommonDenominator(int, int);
+	int GetCommonDenominator(int, int) const;
 
 public:
 	class Invalid {};
@@ -117,7 +117,7 @@ std::ostream& operator<< (std::ostream& os, const Rational& rational) {
 
 
 // Trova il denominatore comune più stringente
-int Rational::GetCommonDenominator(int first_denominator, int second_denominator) {
+int Rational::GetCommonDenominator(int first_denominator, int second_denominator) const{
 	if (first_denominator > second_denominator) {
 		if (first_denominator % second_denominator == 0) {
 			return first_denominator;
@@ -126,7 +126,7 @@ int Rational::GetCommonDenominator(int first_denominator, int second_denominator
 	else if (second_denominator % first_denominator == 0) {
 		return second_denominator;
 	}
-
+	
 	return first_denominator * second_denominator;
 }
 
@@ -179,16 +179,16 @@ int main(void) {
 	}
 }
 
+
 /*
 * Domande che mi sono venute in mente:
-* 1 - 'Corretta' sintassi delle variabili e membri (https://en.cppreference.com/w/cpp/language/operators)
+* 1 - 'Corretta' sintassi delle variabili e membri (https://google.github.io/styleguide/cppguide.html#Naming)
 *	In particolare su "underscore" delle variabili e le costanti con K
 * 
 * 2 - this ecessivo o piu corretto per la lettura??
-* 3- Nell interfaccia della classe si mettono le variabili i nomi dei paramewtri?
-* 4 - GetCommonDenominator devo mettere const come funzione?? Tanto i valori vengono copiati non devo verranno modificati
-* 5- Codice in REGIONI!
-* 6- rendere operator<< FRIEND FUNCTION?
-* 7- Int + rational IMPOSSIBILE ?? 
-* 8- Member function vs helper function? IO ho fatto con tutte member function
+* 3 - Nell interfaccia della classe si mettono le variabili i nomi dei paramewtri?
+* 5 - Codice in REGIONI! #pragma region MyRegion
+* 6  - rendere operator<< FRIEND FUNCTION?
+* 7 - Int + rational IMPOSSIBILE ?? 
+* 8 - Member function vs helper function? IO ho fatto con tutte member function
 */
