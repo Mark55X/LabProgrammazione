@@ -3,10 +3,11 @@
 
 using std::cout;
 using std::endl;
-using namespace lab2;
+using namespace stefani_number;
 
 int main(void) {
 	try {
+
 		Rational r1{};
 		Rational r2{ 3 };
 		Rational r3{ 4, -5 };
@@ -23,6 +24,7 @@ int main(void) {
 		Rational r5 = r3 + r4;
 		cout << "R3 + R4: " << r5 << endl;
 		cout << "R3 + 5: " << r3 + 5 << endl;
+		cout << "6 + R3: " << 6 + r3 << endl;
 		cout << "-------------------------" << endl;
 
 		cout << "DIFFERENZE:" << endl;

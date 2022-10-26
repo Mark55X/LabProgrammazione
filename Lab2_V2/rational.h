@@ -1,14 +1,11 @@
-#include <iostream>
 
-namespace lab2 {
+namespace stefani_number {
 	class Rational {
 	private:
 		int numerator_;
 		int denominator_;
 
 		static constexpr int kDefaultDenominator = 1;
-
-		int GetCommonDenominator(int, int) const;
 
 	public:
 		class Invalid {};
@@ -18,20 +15,23 @@ namespace lab2 {
 		Rational(int, int);
 
 		Rational& operator= (const Rational&);
-		Rational& operator+ (const Rational&);
-		Rational& operator+ (int);
-
-		Rational& operator- (const Rational&);
-		Rational& operator* (const Rational&);
-		Rational& operator/ (const Rational&);
-		bool operator== (const Rational&);
-		bool operator> (const Rational&);
-		bool operator< (const Rational&);
-
+				
 		int GetNumerator() const { return numerator_; }
 		int GetDenominator() const { return denominator_; }
 		double to_double() const;
 	};
 
+	Rational operator+ (const Rational&, const Rational&);
+	Rational operator+ (int, const Rational&);
+
+	Rational operator- (const Rational&, const Rational&);
+	Rational operator* (const Rational&, const Rational&);
+	Rational operator/ (const Rational&, const Rational&);
+
+	bool operator== (const Rational&, const Rational&);
+	bool operator> (const Rational&, const Rational&);
+	bool operator< (const Rational&, const Rational&);
+
 	std::ostream& operator<< (std::ostream&, const Rational&);
+
 }
