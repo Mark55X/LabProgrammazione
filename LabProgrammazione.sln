@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab3.3", "Lab3.3\Lab3.3.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab3.4", "Lab3.4\Lab3.4.vcxproj", "{C73BE168-BCFE-4AA5-85DD-85FD1F5689FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGiulia", "TestGiulia\TestGiulia.vcxproj", "{29BBB94E-07EE-4243-8C53-8642977F4422}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{C73BE168-BCFE-4AA5-85DD-85FD1F5689FF}.Release|x64.Build.0 = Release|x64
 		{C73BE168-BCFE-4AA5-85DD-85FD1F5689FF}.Release|x86.ActiveCfg = Release|Win32
 		{C73BE168-BCFE-4AA5-85DD-85FD1F5689FF}.Release|x86.Build.0 = Release|Win32
+		{29BBB94E-07EE-4243-8C53-8642977F4422}.Debug|x64.ActiveCfg = Debug|x64
+		{29BBB94E-07EE-4243-8C53-8642977F4422}.Debug|x64.Build.0 = Debug|x64
+		{29BBB94E-07EE-4243-8C53-8642977F4422}.Debug|x86.ActiveCfg = Debug|Win32
+		{29BBB94E-07EE-4243-8C53-8642977F4422}.Debug|x86.Build.0 = Debug|Win32
+		{29BBB94E-07EE-4243-8C53-8642977F4422}.Release|x64.ActiveCfg = Release|x64
+		{29BBB94E-07EE-4243-8C53-8642977F4422}.Release|x64.Build.0 = Release|x64
+		{29BBB94E-07EE-4243-8C53-8642977F4422}.Release|x86.ActiveCfg = Release|Win32
+		{29BBB94E-07EE-4243-8C53-8642977F4422}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
