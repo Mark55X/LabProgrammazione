@@ -61,9 +61,14 @@ bool IsPalindrome(const char* first, const char* last) {
         return false;                        //Metodologia di sviluppo by Marco
     }
 
-
+    int index = 0;
+    while (&first[index] <= &last[-index]) {
+        if (first[index] != last[-index])
+            return false;
+        index++;
+    }
     
-    return false;
+    return true;
 }
 
 
