@@ -14,7 +14,7 @@ int main(void)
 	print_array_length(my_array);
 
 	return 0;
-}
+}s
 
 void print_array_length(double array[]) { 
 	cout << "print_array_length : Dimensione array di double : " << sizeof(array) / sizeof(double) << endl;
