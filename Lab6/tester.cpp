@@ -3,6 +3,8 @@
 
 
 int main() {
-	MyVector<int> test;
+	MyVector<int> test = {5,7,9,2,4};
 	std::cout << test.size();
+	
+	
 }
