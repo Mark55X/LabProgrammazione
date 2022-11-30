@@ -3,32 +3,30 @@
 #include <vector>
 using std::cout;
 using std::vector;
-using std::string;
 
-void print(string, vector<int>);
+class A {
+
+public:
+
+    virtual void print() { cout << "1"; }
+
+};
+
+class B : public A {
+
+public:
+     void print()  { cout << "2"; }
+    
+};
+
+void ses(A& sos) {
+    sos.print();
+}
 
 int main(void)
 {
-    string s = "Vettore";
-    vector<int> vect{ 1, 2, 3, 4, 5 };
-
-    print(s, vect);
-
+    B *c = new B();
+    c->print();
     return 0;
 }
 
-void print(string name, vector<int> v)
-{
-    cout << name + ": {";
-
-    for (int i = 0; i < v.size(); ++i)
-    {
-        cout << v[i];
-
-        if (i != v.size() - 1)
-            cout << ", ";
-    }
-
-    cout << "}\n";
-
-}
