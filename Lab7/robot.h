@@ -14,8 +14,6 @@ namespace my_game {
 
 	private:
 		
-
-
 	};
 }
 

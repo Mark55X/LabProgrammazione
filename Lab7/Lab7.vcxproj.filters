@@ -21,12 +21,18 @@
     <ClCompile Include="maze.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="random-robot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="maze.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="robot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="random-robot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

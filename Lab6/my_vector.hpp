@@ -1,5 +1,5 @@
-#ifndef MyVector_hpp
-#define MyVector_hpp
+#ifndef my_vector_hpp
+#define my_vector_hpp
 
 #include "my_vector.h"
 #include <initializer_list>
@@ -27,6 +27,7 @@ MyVector<T>::MyVector(initializer_list<T> lst)
 template <typename T>
 MyVector<T>::~MyVector(){
 	delete[] buffer_;
+	buffer_ = nullptr;
 	buffer_size_ = 0;
 	current_size_ = 0;
 }
@@ -67,6 +68,13 @@ const T& MyVector<T>::At(int index) const
 template<typename T>
 void MyVector<T>::push_back(const T& value)
 {
+	if (current_size_ == buffer_size_) {
+		T*
+		buffer_size_ = ;
+	}
+	buffer_[current_size_++] = value;
+
+
 
 }
 
@@ -90,4 +98,4 @@ void MyVector<T>::pop_back()
 
 
 
-#endif // MyVector_hpp
+#endif // my_vector_hpp

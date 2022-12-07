@@ -1,5 +1,6 @@
 #include <iostream>
 #include "maze.h"
+#include "random-robot.h"
 
 using my_game::Maze;
 
@@ -15,6 +16,8 @@ int main()
         }
         std::cout << std::endl;
     }
+
+    
 }
 
 

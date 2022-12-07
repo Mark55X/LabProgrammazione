@@ -26,6 +26,7 @@ namespace my_game {
 		Maze(string file_path);
 		~Maze();
 		char** matrix();
+		bool set_current_position(Position pos);
 
 	private:
 		void AllocateMatrix();
@@ -34,10 +35,13 @@ namespace my_game {
 		Position start_position_;
 		Position current_position_;
 		vector<Position> end_positions_;
+		bool isExited;
 
 		static constexpr int kMatrixLength = 9;
 
 	};
+
+
 }
 
 

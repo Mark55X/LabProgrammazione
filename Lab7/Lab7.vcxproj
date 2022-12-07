@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="Lab7.cpp" />
     <ClCompile Include="maze.cpp" />
+    <ClCompile Include="random-robot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="maze.h" />
+    <ClInclude Include="random-robot.h" />
     <ClInclude Include="robot.h" />
   </ItemGroup>
   <ItemGroup>

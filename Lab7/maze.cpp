@@ -65,6 +65,27 @@ namespace my_game {
 		return matrix_;
 	}
 
+	bool Maze::set_current_position(Position pos)
+	{
+		if (pos.x < 0
+			|| pos.y >= kMatrixLength
+			|| pos.x >= kMatrixLength
+			|| pos.y < 0)
+				return false;
+
+		if (matrix_[pos.x][pos.y] == '*') {
+			return false;
+		}
+
+		char& curr_pos = matrix_[current_position_.x][current_position_.y];
+		if (curr_pos != 'S') {
+			curr_pos = ' ';
+			matrix_[pos.x][pos.y] = 'R';
+		}
+		
+		current_position_ = pos;
+	}
+
 	void Maze::AllocateMatrix() {
 		matrix_ = new char* [kMatrixLength] ;
 		for (int i{ 0 }; i < kMatrixLength; i++)
