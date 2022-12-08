@@ -21,7 +21,10 @@
     <ClCompile Include="maze.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="random-robot.cpp">
+    <ClCompile Include="random_robot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="right_hand_rule_robot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +35,10 @@
     <ClInclude Include="robot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="random-robot.h">
+    <ClInclude Include="random_robot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="right_hand_rule_robot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

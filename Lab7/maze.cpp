@@ -5,8 +5,8 @@ using std::ifstream;
 
 namespace my_game {
 
-	Maze::Maze(string file_path)
-	{
+	Maze::Maze(string file_path) : end_reached_{false}
+	{		
 		ifstream file(file_path);
 		if (file.is_open()) {
 			AllocateMatrix();
@@ -60,9 +60,9 @@ namespace my_game {
 		delete[] matrix_; 
 	}
 
-	char** Maze::matrix()
+	const char** Maze::matrix()
 	{
-		return matrix_;
+		return const_cast<const char**>(matrix_);
 	}
 
 	bool Maze::set_current_position(Position pos)
@@ -73,17 +73,32 @@ namespace my_game {
 			|| pos.y < 0)
 				return false;
 
-		if (matrix_[pos.x][pos.y] == '*') {
+		char& new_pos = matrix_[pos.x][pos.y];
+		char& curr_pos = matrix_[current_position_.x][current_position_.y];
+		if (new_pos == '*') {
 			return false;
 		}
 
-		char& curr_pos = matrix_[current_position_.x][current_position_.y];
+		if (new_pos != 'S' && new_pos != 'E') {
+			new_pos = 'R';
+		}
+
 		if (curr_pos != 'S') {
 			curr_pos = ' ';
-			matrix_[pos.x][pos.y] = 'R';
 		}
-		
+
 		current_position_ = pos;
+		
+		if (new_pos == 'E') {
+			end_reached_ = true;
+		}
+
+		return true;
+	}
+
+	Position Maze::current_position()
+	{
+		return current_position_;
 	}
 
 	void Maze::AllocateMatrix() {
@@ -92,5 +107,8 @@ namespace my_game {
 			matrix_[i] = new char[kMatrixLength];
 	}
 	
+	bool Maze::end_reached() {
+		return end_reached_;
+	}
 }
 
